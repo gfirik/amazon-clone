@@ -7,6 +7,7 @@ export default function Home({ products }) {
   return (
     <div className="bg-gray-100">
       <Head>
+        <link rel="icon" href="/logo.png"></link>
         <title>Amazon Clone</title>
       </Head>
 
