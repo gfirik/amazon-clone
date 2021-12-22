@@ -2,7 +2,7 @@ import firebase from "firebase";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBABoA8T-jXaC4verhVhrC9JPyvUUAbmVk",
-    authDomain: "amz-clone-75cb5.firebaseapp.com",
+    authDomain: "amazonclonewebsite.netlify.app",
     projectId: "amz-clone-75cb5",
     storageBucket: "amz-clone-75cb5.appspot.com",
     messagingSenderId: "638267628142",
