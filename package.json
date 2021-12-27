@@ -12,6 +12,7 @@
     "@stripe/react-stripe-js": "^1.7.0",
     "@stripe/stripe-js": "^1.22.0",
     "@tailwindcss/line-clamp": "^0.2.0",
+    "axios": "^0.24.0",
     "currency-formatter": "^1.5.9",
     "firebase": "^8.10.0",
     "firebase-admin": "^9.8.0",
