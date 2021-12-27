@@ -9,7 +9,7 @@ import { useSession } from "next-auth/react";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 
-const stripePromise = loadStripe(process.env.stripe_public_key);
+const stripePromise = loadStripe(`${process.env.stripe_public_key}`);
 
 function Checkout() {
 
@@ -81,7 +81,7 @@ function Checkout() {
                                 role="link"
                                 onClick={createCheckoutSession}
                                 disabled={!session}
-                                className={`button mt-2 ${
+                                className={`button mt-2 flex-grow ${
                                     !session && 'from-gray-300 to-gray-500 border-gray-300 cursor-not-allowed'
                                 }`} 
                             >
