@@ -34,7 +34,7 @@ export default function Navbar({ data }) {
             {/* Home Page Navigation Button & Logo */}
             <NavIcon>
                 <Link to='/'>
-                    <RiShoppingBag3Fill size={30} />
+                    <RiShoppingBag3Fill size={50} />
                 </Link>
             </NavIcon>
             

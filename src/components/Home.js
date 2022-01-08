@@ -13,44 +13,48 @@ export default function Home() {
     return (
         <Container>
             {data.categories.map((category) => (
-                <div key={category.name}>
+                <ProductFeed key={category.name}>
                     <h2>{category.name}</h2>
-                    <div>
+                    <ProductCards>
                         {category.products.map((product) => (
                             <Product 
-                                key={product.id}
+                                id={product.id}
                                 category={category.name}
                                 image={[product.gallery]}                
                                 name={product.name}
                                 prices={[product.prices]}
                                 inStock={product.inStock}
-                                />
-                            ))
-                        }
-                    </div>
-                </div>
+                            />
+                        ))}
+                    </ProductCards>
+                </ProductFeed>
             ))}
         </Container>
     )
 }
 
 const Container = styled.div`
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     width: 100%;
     display: flex;
     flex-direction: column;
-    div {
-        display: flex;
-        flex-direction: column;
-        margin: 2rem 0;
-        div {
-            display: flex;
-            margin: 1rem;
-            flex-direction: row;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            flex-grow: 1 1 0;
-        }
+`;
+const ProductFeed = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 2rem;
+    h2{
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        margin: 2rem 4rem;
     }
+`;
+const ProductCards = styled.div`
+    display: grid;
+    width: 100%;
+    grid-row-gap: 2rem;
+    place-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
 `;

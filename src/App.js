@@ -12,6 +12,7 @@ import styled from 'styled-components';
 import Home from './components/Home';
 import Clothes from './components/Clothes';
 import Tech from './components/Tech';
+import Footer from './components/Footer';
 
 export default function App() {
 
@@ -33,6 +34,7 @@ export default function App() {
           <Route path="/tech" element={<Tech/>} />
         </Routes>
       </Container>
+      <Footer />
     </Router>
   );
 }
@@ -43,6 +45,6 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10rem;
+  margin-top: 5rem;
   color: #1d1f22;
 `;
