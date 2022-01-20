@@ -10,21 +10,17 @@ import {
 } from "react-router-dom";
 import styled from 'styled-components';
 import Home from './components/Home';
-import Clothes from './components/Clothes';
-import Tech from './components/Tech';
+import Clothes from './pages/Clothes';
+import Tech from './pages/Tech';
 import Footer from './components/Footer';
 
 export default function App() {
-
   const { loading, error, data } = useQuery(CATEGORIES);
-
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error.message}</p>;
   return (
     <Router>
-
       <Navbar data={data} />
-    
       <Container>
         <Routes>
         {/* I tried to use filter to filter the data and then map over it to get the products, but it didn't work. 
@@ -41,9 +37,8 @@ export default function App() {
 
 const Container = styled.div`
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   margin-top: 5rem;
   color: #1d1f22;
