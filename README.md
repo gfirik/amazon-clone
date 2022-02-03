@@ -1,1 +1,1 @@
-# Amazon.com Clon Website using Next.js, Redux, Firebase, Next Auth, Tailwind CSS, Redux and Stripe
+# Amazon.com Clone Website using Next.js, Redux, Firebase, Next Auth, Tailwind CSS, Redux and Stripe
